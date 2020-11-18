@@ -1,0 +1,10 @@
+4493320815 has a sequence length of 1012
+2977159579 has a sequence length of 1014
+3969546105 has a sequence length of 1017
+4956336199 has a sequence length of 1038
+4405632167 has a sequence length of 1043
+2937088111 has a sequence length of 1045
+3916117481 has a sequence length of 1048
+2610744987 has a sequence length of 1050
+4578853915 has a sequence length of 1087
+4890328815 has a sequence length of 1131
