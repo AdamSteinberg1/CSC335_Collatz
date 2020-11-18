@@ -4,16 +4,14 @@ import "fmt"
 import "sort"
 
 func sequenceLength(num int) int {
-    length := 0
-    for num > 1    {
-        if num%2 == 0        {
-            num = num / 2
-        }        else        {
-            num = num * 3 + 1
-        }
-        length += 1
+
+    if num == 1 {
+        return 0
+    } else if num%2 == 0 {
+        return 1 + sequenceLength(num / 2)
+    } else {
+        return 1 + sequenceLength(num * 3 + 1)
     }
-    return length
 }
 
 //a custom elem type that contains a num and it's sequence length
@@ -44,17 +42,30 @@ func (s byLength) Less(i, j int) bool {
     return compareElems(s[i], s[j])
 }
 
+func minIndex(array []elem) int {
+    minIndex := 0
+    for i := 0; i < 10; i++ {
+        if compareElems(array[i], array[minIndex]) {
+            minIndex = i
+        }
+    }
+    return minIndex
+}
+
 func main() {
 
    resultArray := make([]elem, 10)
-   myNum := 9
-   myElem := elem{myNum,sequenceLength(myNum)}
-   fmt.Printf("%d has a length %d\n", myElem.num, myElem.length)
 
-   resultArray[5] = elem{-1,-1}
-
+   for i := 1; i < 4999999999; i++ {
+       myElem := elem{i, sequenceLength(i)}
+       minIndex := minIndex(resultArray)
+       if compareElems(resultArray[minIndex], myElem) {
+           resultArray[minIndex] = myElem
+       }
+   }
    sort.Sort(byLength(resultArray))
 
-   fmt.Println(resultArray)
-
+    for _, myElem := range resultArray {
+        fmt.Printf("%d has a length %d\n", myElem.num, myElem.length)
+    }
 }
