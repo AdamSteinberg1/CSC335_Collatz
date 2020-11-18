@@ -1,5 +1,0 @@
-9 has a length 19
-
-real	0m0.224s
-user	0m0.250s
-sys	0m0.125s
