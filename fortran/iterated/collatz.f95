@@ -7,7 +7,7 @@ integer(kind = 8) :: i
 
 resultArray = 0 !initialize all elements in array to 0
 
-do i = 0, 4999999999_8 !make 4999999999 eventually
+do i = 0, 4999999999_8 !iterate through all integers less than 5 billion
     valLength = sequenceLength(i)
     min = minIndex(resultArray)
 
@@ -51,6 +51,7 @@ contains
         sequenceLength = length
     end function sequenceLength
 
+    !finds the index of the minimum element of the array
     integer function minIndex(array)
         integer(kind = 8), dimension(10,2), intent(in) :: array
         integer :: i
@@ -68,7 +69,7 @@ contains
         end do
     end function minIndex
 
-
+    !sorts the two-dimensional array a first by column two, then by column 1
     subroutine bubble_sort(a)
       integer(kind = 8), intent(in out), dimension(10, 2) :: a
       integer(kind = 8) :: temp1, temp2

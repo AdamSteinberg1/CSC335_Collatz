@@ -3,6 +3,7 @@ package main
 import "fmt"
 import "sort"
 
+//iteratively calculate the sequence length of num
 func sequenceLength(num int) int {
     length := 0
     for num > 1    {
@@ -16,7 +17,7 @@ func sequenceLength(num int) int {
     return length
 }
 
-//a custom elem type that contains a num and it's sequence length
+//a custom elem type that contains a number and it's sequence length
 type elem struct {
     num int
     length  int
@@ -44,6 +45,7 @@ func (s byLength) Less(i, j int) bool {
     return compareElems(s[i], s[j])
 }
 
+//find the index of the minimum element in the array
 func minIndex(array []elem) int {
     minIndex := 0
     for i := 0; i < 10; i++ {

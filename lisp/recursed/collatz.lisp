@@ -1,5 +1,6 @@
 #!/usr/bin/sbcl --script
 
+;recursively calculates the sequence length of a number
 (defun getSequenceLength (n)
   (cond
     ((= n 1) 0)

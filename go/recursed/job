@@ -1,0 +1,1 @@
+go run collatz.go > output.txt

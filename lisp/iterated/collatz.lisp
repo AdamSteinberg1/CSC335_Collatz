@@ -1,5 +1,6 @@
 #!/usr/bin/sbcl --script
 
+;iteratively calculate the sequence length of a number
 (defun getSequenceLength (n)
   (let ((length 0))
     (loop
