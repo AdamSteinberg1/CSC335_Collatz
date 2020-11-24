@@ -2,7 +2,7 @@
 import Base.isless
 
 #recursively calculate the sequence length of a number
-function sequenceLength(num::Integer)
+function sequenceLength(num::Int64)
     if num == 1
         return 0
     elseif num%2 == 0

@@ -2,7 +2,7 @@
 import Base.isless
 
 #iteratively calculate the sequence length of a number
-function sequenceLength(num::Integer)
+function sequenceLength(num::Int64)
     length = 0
     while num > 1
         if num%2 == 0

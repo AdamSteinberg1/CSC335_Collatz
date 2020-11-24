@@ -34,10 +34,9 @@ end do
 
 contains
 
-    integer function sequenceLength(num)
+    integer(kind = 8) function sequenceLength(num)
         integer(kind = 8), intent(in) :: num
-        integer(kind = 8) :: i
-        integer :: length
+        integer(kind = 8) :: i, length
         i = num
         length = 0
         do while ( i /= 1 )
